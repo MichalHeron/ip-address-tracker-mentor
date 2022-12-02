@@ -1,38 +1,97 @@
-.App {
-  text-align: center;
+:root {
+	--VeryDarkGray: hsl(0, 0%, 17%);
+	--DarkGray: hsl(0, 0%, 59%);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.ipApiContainer {
+	background-image: url(./images/pattern-bg.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+  z-index: 1001;
+  position: relative;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.wrapper {
+	max-width: 30rem;
+	margin: 0 auto;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.title {
+	padding-top: 3rem;
+	color: white;
+	font-size: 2.5rem;
+	text-align: center;
+	font-weight: normal;
 }
 
-.App-link {
-  color: #61dafb;
+.inputContainer {
+	margin-top: 3rem;
+	display: flex;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.inputIp,
+.submitIp {
+	height: 5rem;
+	padding: 0 0.5rem;
+	border: none;
+	cursor: pointer;
 }
+
+.inputIp {
+	font-size: 1.8rem;
+	width: 100%;
+	border-top-left-radius: 1.5rem;
+	border-bottom-left-radius: 1.5rem;
+	padding: 0 2rem;
+}
+
+.submitIp {
+	aspect-ratio: 1/1;
+	background-color: black;
+	background-image: url(./images/icon-arrow.svg);
+	background-position: center;
+	background-repeat: no-repeat;
+	border-top-right-radius: 1.5rem;
+	border-bottom-right-radius: 1.5rem;
+}
+
+.submitIp:hover {
+  background-color: var(--VeryDarkGray);
+}
+
+.ipResultContainer {
+	margin-top: 2rem;
+	padding: 2rem;
+	background-color: white;
+	border-radius: 1.5rem;
+}
+
+.resultName,
+.result {
+	text-align: center;
+	font-weight: bold;
+}
+
+.resultName {
+	text-transform: uppercase;
+	color: var(--DarkGray);
+	font-size: 1.1rem;
+	padding-bottom: 0.5rem;
+}
+
+.result {
+	padding-bottom: 2rem;
+  font-size: 2.5rem;  
+}
+
+.result:last-child {
+	padding-bottom: 0rem;
+}
+
+/* 
+- Mobile: 375px
+- Desktop: 1440px
+
+- Font size (text input): 18px
+*/
